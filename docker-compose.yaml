@@ -1,0 +1,27 @@
+---
+services:
+  postgres:
+    image: nvcr.io/nvidia/tritonserver:24.09-py3
+    volumes:
+      - ./model_repository:/models
+    ports:
+      - 8000:8000
+      - 8001:8001
+      - 8002:8002
+    command: tritonserver --model-repository=/models
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "curl", "-q", "http://localhost:8000/v2/heath/ready"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
