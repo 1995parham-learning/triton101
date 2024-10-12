@@ -12,7 +12,7 @@ I have very poor system with Nvidia 2060 but hope is the only thing I have.
 Use [`dotfiles`](https://github.com/1995parham/dotfiles/) as follows:
 
 ```bash
-./start.sh nvidia-container 
+./start.sh nvidia-container
 ```
 
 ## Download Model?
