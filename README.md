@@ -16,3 +16,7 @@ Use [`dotfiles`](https://github.com/1995parham/dotfiles/) as follows:
 ```
 
 ## Download Model?
+
+```bash
+./fetch-model.sh
+```
