@@ -1,6 +1,8 @@
 ---
 services:
-  postgres:
+  client:
+    image: nvcr.io/nvidia/tritonserver:24.09-py3-sdk
+  server:
     image: nvcr.io/nvidia/tritonserver:24.09-py3
     volumes:
       - ./model_repository:/models
