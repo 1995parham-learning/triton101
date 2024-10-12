@@ -6,3 +6,5 @@ set -o pipefail
 
 echo 'triton server using models defined in model_repository'
 docker compose up -d --wait
+
+docker run -it --rm --net=host nvcr.io/nvidia/tritonserver:24.09-py3-sdk
