@@ -5,4 +5,4 @@ set -eu
 set -o pipefail
 
 echo 'triton server using models defined in model_repository'
-docker compose up -d --ready
+docker compose up -d --wait
