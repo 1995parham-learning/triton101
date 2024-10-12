@@ -17,6 +17,8 @@ Use [`dotfiles`](https://github.com/1995parham/dotfiles/) as follows:
 
 ## Download Model?
 
+With the following script you can download a sample ONNX model.
+
 ```bash
 ./fetch-model.sh
 ```
